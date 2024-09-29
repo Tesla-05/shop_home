@@ -3,6 +3,10 @@
 {% load carts_tags %}
 
 
+{% block css %}
+    <link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}">
+{% endblock  %}
+
 {% block content %}
     <div class="row">
         <div class="container mt-5">
@@ -20,3 +24,11 @@
         </div>
     </div>
 {% endblock  %}
+
+{% block footer %}
+    <footer class="py-4 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white"> © ООО «КОМ ГЛОБАЛ ГИПЕР МЕГА НЭТ», 2024</p>
+        </div>
+    </footer>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}">
+{% endblock  %}
+
+{% block modal_cart %}
+    {% include "includes/cart_button.html" %}
+{% endblock  %}
+
+{% block content %}
+{% comment %} <div class="mt-5 pt-5 bg-white custom-shadow rounded"> {% endcomment %}
+{% comment %} <div class="nesolestag-enadenud"> {% endcomment %}
+<div class="cont">     
+    <h3 style="text-align:center; color:black;;"><strong>{{ content }}</strong></h3>
+    <div class="ico-wrap" style="color:black;"> <i class="fa fa-map-marker ico-contact"></i>
+    </div>
+    <div class="meanous-andscoev">
+        <h4 class="aio-icon-title" style="color:black;">{{ text_on_page.ur_adr }}</h4>
+        <div class="aio-icon-description" style="color:black;">
+            <h6>{{ text_on_page.ur_text }}</h6>
+        </div>
+    </div>
+  
+    <span class="kesednsoled"></span>
+  
+    <div class="ico-wrap" style="color:black;"> <i class="fa fa-clock-o ico-contact"></i>
+    </div>
+    <div class="meanous-andscoev">
+        <h4 class="aio-icon-title" style="color:black;">{{ text_on_page.grafik }}</h4>
+        <div class="aio-icon-description" style="color:black;">
+            <h6>{{ text_on_page.grafik_text }}</h6>
+        </div>
+    </div>
+  
+    <span class="kesednsoled"></span>
+  
+    <div class="ico-wrap" style="color:black;"> 
+        <i class="fa fa-envelope ico-contact"></i>
+    </div>
+    <div class="meanous-andscoev" style="color:black;">
+        <h4 class="aio-icon-title">{{ text_on_page.email }}</h4>
+        <div class="aio-icon-description">
+            <h6>{{ text_on_page.email_text }}</h6>
+        </div>
+    </div>
+  
+    <span class="kesednsoled"></span>
+  
+    <div class="ico-wrap" style="color:black;">
+        <i class="fa fa-phone ico-contact"></i>
+    </div>
+    <div class="meanous-andscoev" style="color:black;">
+        <h4 class="aio-icon-title">{{ text_on_page.phone }}</h4>
+        <div class="aio-icon-description">
+            <h6>{{ text_on_page.phone_number }}</h6>
+        </div>
+    </div>
+  
+    <span class="kesednsoled"></span>
+  
+  </div>
+    </div>
+</div>
+{% comment %} </div> {% endcomment %}
+{% endblock %}
+
+{% block footer %}
+    <footer class="py-4 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white"> © ООО «КОМ ГЛОБАЛ ГИПЕР МЕГА НЭТ», 2024</p>
+        </div>
+    </footer>
+{% endblock %}

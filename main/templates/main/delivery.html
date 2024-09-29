@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}">
+{% endblock  %}
+
+{% block modal_cart %}
+    {% include "includes/cart_button.html" %}
+{% endblock  %}
+
+{% block content %}
+{% comment %} <div class="container-sm mt-5 pt-5 bg-white custom-shadow rounded" style="width:auto; height:auto"> {% endcomment %}
+    <div class="about">     
+        <h3 style="text-align:center; color:black; padding-top:40px;"><strong>{{ content }}</strong></h3>
+        <div class="meanous-andscoev">
+            <div class="aio-icon-description  delivery" style="color:black; padding-left:50px">
+                <h5>{{ text_on_page.time_delivery }}</h5>
+                <h6>{{ text_on_page.time_delivery_text }}</h6>
+                <br>
+                <h5>{{ text_on_page.delivery_one_day }}</h5>
+                <h6>{{ text_on_page.delivery_one_day_text }}</h6>
+                <br>
+                <h5>{{ text_on_page.speshial_delivery }}</h5>
+                <h6>{{ text_on_page.speshial_delivery_text }}</h6>
+            </div>
+        </div>
+      
+        <span class="kesednsoled"></span>
+      
+        <div class="meanous-andscoev">
+            <h4 class="aio-icon-title" style="color:black; padding-left:50px">{{ text_on_page.grafik }}</h4>
+            <div class="aio-icon-description" style="color:black; padding-left:50px">
+                <h6>{{ text_on_page.grafik_text }}</h6>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <footer class="py-4 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white"> © ООО «КОМ ГЛОБАЛ ГИПЕР МЕГА НЭТ», 2024</p>
+        </div>
+    </footer>
+{% endblock %}

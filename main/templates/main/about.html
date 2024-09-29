@@ -11,17 +11,39 @@
 {% endblock  %}
 
 {% block content %}
-    <div class="mt-5 pt-5 bg-white custom-shadow rounded">
-        <h2 class="m-2"><strong>{{ content }}</strong></h2>
-        <p class="m-2">{{ text_on_page }}</p>
+    <div class="about">     
+        <h3 style="text-align:center; color:black;;"><strong>{{ content }}</strong></h3>
+        <div class="meanous-andscoev">
+            <div class="aio-icon-description" style="color:black; margin-left:20px">
+                {% autoescape off %}
+                <h6 style="line-height: 1.5; text-indent: 5%;">{{ text_on_page }}</h6>
+                {% endautoescape %}
+            </div>
+        </div>
     </div>
+
+    {% comment %} <span class="kesednsoled"></span>
+    <div class="mt-5 pt-5 bg-white custom-shadow rounded">
+        
+        <h2 class="m-3 text-center"><strong>{{ content }}</strong></h2>
+        <br>
+        <div class="container about-block mobile-none">
+        {% autoescape off %}
+
+            {% comment %} <p class="card-text">{{ text_on_page }}</p> {% endcomment %}
+            {% comment %} <p class="about-onas">{{ text_on_page }}</p>
+        {% endautoescape %}
+        </div>
+    </div> {% endcomment %}
+    
+
 
 {% endblock %}
 
 {% block footer %}
     <footer class="py-4 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Home Python Hub Studio 2023</p>
+            <p class="m-0 text-center text-white">© ООО «КОМ ГЛОБАЛ ГИПЕР МЕГА НЭТ», 2024</p>
         </div>
     </footer>
 {% endblock %}

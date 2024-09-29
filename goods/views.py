@@ -12,8 +12,8 @@ class CatalogView(ListView):
     # queryset = Products.objects.all().order_by("-id")
     template_name = "goods/catalog.html"
     context_object_name = "goods"
-    paginate_by = 3
-    allow_empty = False
+    paginate_by = 6
+    allow_empty = True
     slug_url_kwarg = "category_slug"
 
     def get_queryset(self):
@@ -28,14 +28,14 @@ class CatalogView(ListView):
             goods = q_search(query)
         else:
             goods = super().get_queryset().filter(category__slug=category_slug)
-            if not goods.exists():
-                raise Http404()
+            # if not goods.exists():
+            #     raise Http404()
+        if goods.exists():
+            if on_sale:
+                goods = goods.filter(discount__gt=0)
 
-        if on_sale:
-            goods = goods.filter(discount__gt=0)
-
-        if order_by and order_by != "default":
-            goods = goods.order_by(order_by)
+            if order_by and order_by != "default":
+                goods = goods.order_by(order_by)
 
         return goods
 
